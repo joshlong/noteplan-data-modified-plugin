@@ -1,0 +1,22 @@
+{
+  "noteplan.minAppVersion": "3.0.21", 
+  "macOS.minVersion": "10.15.7",
+  "iOS.minVersion": "14",
+  "plugin.id": "joshlong.date-modified", 
+  "plugin.name": "Josh's Date Modified", 
+  "plugin.description": "Makes it easier to keep and visualize a changelog.", 
+  "plugin.author": "Josh Long",
+  "plugin.url": "https://joshlong.com/noteplan-date-modified-plugin.html",
+  "plugin.version": "0.0.1", 
+  "plugin.dependencies": [ ], 
+  "plugin.script": "script.js",
+  "plugin.commands": [ 
+    {
+      "name": "move", 
+      "alias": ["m", "mv"],
+      "description": "Makes it easier to keep and visualize a changelog", 
+      "jsFunction": "changelogNote",
+    },
+  ],
+  "plugin.settings": []
+}
