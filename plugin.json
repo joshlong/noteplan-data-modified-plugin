@@ -13,7 +13,7 @@
   "plugin.commands": [ 
     {
       "name": "dlog", 
-      "alias": ["cl", "dlog" ],
+	"alias": ["cl", "jlog", "dlog" ],
       "description": "Makes it easier to keep and visualize a changelog", 
       "jsFunction": "changelogNote",
     },
