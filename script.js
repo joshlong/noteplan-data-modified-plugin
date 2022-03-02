@@ -49,17 +49,17 @@ async function changelogNote(){
 			const dts = currentDatetimeString(d);
 			const ts = ds + ' ' + dts 
   			const text = await cb.showInput("What's happened?", ts)
+  			
   			// make sure there's a title that has the date. we need a title otherwise the next bit won't work
   			const paragraphs  = Editor.paragraphs
   			if (paragraphs.length > 0 ){
 			  const p = paragraphs [0]
-			  console.log(p.type + ":"  + p.content)
 			  if (p.type === 'title') {
 			  	const divider = ' | '
 			  	const txt = p.content 
 			  	if ( txt .indexOf(divider)!=-1) {
 			  	 const keep = txt.split(divider)[1]
-			  	 p.content = ds + divider + keep 
+			  	 p.content = ds + divider + keep.trim()
 			  	}
 			  	else {
 			  		p.content = ds + divider + txt  
@@ -70,13 +70,9 @@ async function changelogNote(){
   			}
 
   			// update the changelog 
-  			console.log('new changelog entry: ' + text )
 			Editor.addParagraphBelowHeadingTitle(ts + ' - ' + text, 'list', changelog, true, true)
 
 	}
-	console.log('------------------------------------------------') 	
-	console.log(Editor.type)
-	console.log(Editor.filename)
 
 	if(Editor.type ==  'Notes') {
 	 ensureChangelogExists(Editor.note)	
