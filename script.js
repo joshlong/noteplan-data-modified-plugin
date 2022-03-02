@@ -1,3 +1,10 @@
+/**
+ * 
+ * This script lets me easily add changelog touchpoint information to all of my notes in NotePlan 
+ * 
+ * @author Josh Long 
+ * 
+ */
 async function changelogNote(){
 	const cb = CommandBar 
 	function log(s){
