@@ -12,8 +12,8 @@
   "plugin.script": "script.js",
   "plugin.commands": [ 
     {
-      "name": "dlog", 
-	"alias": ["cl", "jlog", "dlog" ],
+      "name": "jlog", 
+	    "alias": [],
       "description": "Makes it easier to keep and visualize a changelog", 
       "jsFunction": "changelogNote",
     },
